@@ -8,13 +8,13 @@ using FluentNHibernate.Mapping;
 
 namespace Mapping
 {
-    public class HakanMap : ClassMap<Entity>
+    public class EntityMap : ClassMap<Entity>
     {
-        public HakanMap()
+        public EntityMap()
         {
             Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Data);
-            References(x => x.SubEntity).Nullable();
+            References(x => x.SubEntity).Cascade.SaveUpdate().Nullable();
         }
     }
 }

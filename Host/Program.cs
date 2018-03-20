@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Domain;
 using Helper;
 using NHibernate;
+using NHibernate.SqlCommand;
 
 namespace Host
 {
     class Program
     {
+        private static Configuration config;
 
         static Configuration Init()
         {
@@ -27,51 +31,110 @@ namespace Host
         }
 
         static void Main(string[] args)
-        { 
-
-            HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
+        {
+           //  HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
             setupRedis();
-            var conf = Init();
-            Stopwatch watch = new Stopwatch();
-            using (ISession session = conf.GetSessionFactory().OpenSession())
+            config = Init();
+
+            IList<Entity> result = new List<Entity>();
+
+            //Save<Entity>(save =>
+            //{
+            //    for (int i = 0; i < 5000; i++)
+            //    {
+            //        var entity = new Entity { Data = i };
+                   
+            //        if (i % 2 == 0)
+            //        {
+                       
+            //            entity.SubEntity = new Entity() {Data = i*10};
+            //        }
+            //        else if (i % 3 == 0)
+            //        {
+            //            entity.SubEntity = new Entity() { Data = i * 10 };
+            //            entity.SubEntity.SubEntity = new Entity() { Data = i * 10 };
+            //        }
+            //        save.Add(entity);
+            //    }
+
+            //});
+
+           QueryOver<Entity>(queryOver =>
+           {
+               Entity entityAlias=null;
+                result = queryOver.Fetch(x=>x.SubEntity).Eager.Cacheable().List();
+
+           });
+
+            foreach (var item in result)
             {
-                using (var trnx = session.BeginTransaction())
-                {
-                    //Entity e = new Entity();
-                    //e.Data = 3;
-                    //session.Save(e);
-                    //for (int i = 5000; i < 6000; i++)
-                    //{
-                    //    session.Save(new Entity {Data = i});
-                    //}
-                    watch.Start();
-                    var list = session.QueryOver<Entity>().Cacheable().List();
-                    //list.ForEach(x => Console.WriteLine(x.Data));
-
-                    watch.Stop();
-                    trnx.Commit();
-                }
-               
+                //Console.WriteLine(item.Data);
             }
-            Console.WriteLine("elapsed: "+watch.Elapsed);
+
             Console.ReadLine();
-
-
-
-
-            // session.Close();
-
-            //ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
-            //ISubscriber sub = redis.GetSubscriber();
-            //IDatabase db = redis.GetDatabase(12);
-            //db.StringSet("key", "value");
-            //string value = db.StringGet("key");
-            //Console.WriteLine(value);
-
 
         }
 
+        static void SessionScope(Action<ISession> action)
+        {
+            Stopwatch watch = new Stopwatch();
 
+            using (ISession session = config.GetSessionFactory().OpenSession())
+            {
+                using (var trnx = session.BeginTransaction())
+                {
+
+                    watch.Start();
+                    action.Invoke(session);
+                    watch.Stop();
+                    Console.WriteLine("elapsed: " + watch.Elapsed);
+                    trnx.Commit();
+                    Console.WriteLine("Commited");
+                }
+
+            }
+        }
+        static void StatelessSessionScope(Action<IStatelessSession> action)
+        {
+            Stopwatch watch = new Stopwatch();
+
+            using (IStatelessSession session = config.GetSessionFactory().OpenStatelessSession())
+            {
+                using (var trnx = session.BeginTransaction())
+                {
+
+                    watch.Start();
+                    action.Invoke(session);
+                    watch.Stop();
+                    Console.WriteLine("elapsed: " + watch.Elapsed);
+                    trnx.Commit();
+                }
+
+            }
+        }
+
+        static void QueryOver<T>(Action<IQueryOver<T,T>> action) where T : class
+        {
+            SessionScope(session =>
+            {
+                action.Invoke(session.QueryOver<T>());
+            });
+        }
+
+        static void Save<T>(Action<IList<T>> action) where T : class
+        {
+            List<T> entities = new List<T>();
+
+            SessionScope(session =>
+            {
+                action.Invoke(entities);
+                foreach (var item in entities)
+                {
+                    session.SaveOrUpdate(item);
+                }
+
+            });
+        }
 
     }
 }
