@@ -35,6 +35,5 @@ C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Helper\bin\Debug\NHibernate.Caches.Redis.pdb
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Helper\bin\Debug\NHibernate.Caches.Redis.xml
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Helper\bin\Debug\StackExchange.Redis.xml
-C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Helper\obj\Debug\Helper.dll
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Helper\obj\Debug\Helper.pdb

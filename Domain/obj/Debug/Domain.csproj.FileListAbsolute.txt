@@ -4,6 +4,5 @@ C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Domain\obj\Debug\D
 C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Domain\obj\Debug\Domain.pdb
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Domain\bin\Debug\Domain.dll
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Domain\bin\Debug\Domain.pdb
-C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Domain\obj\Debug\Domain.dll
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Domain\obj\Debug\Domain.pdb
