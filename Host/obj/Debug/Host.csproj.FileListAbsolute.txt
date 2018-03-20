@@ -62,6 +62,5 @@ C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Host\bin\Debug\Newtonsoft.Json.xml
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Host\bin\Debug\FluentNHibernate.pdb
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Host\bin\Debug\FluentNHibernate.xml
-C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Host\obj\Debug\Host.exe
 C:\Users\oerturk\Documents\Visual Studio 2015\Projects\asd\FluentNHibernate-2nd-Level-Cache-Redis\Host\obj\Debug\Host.pdb
