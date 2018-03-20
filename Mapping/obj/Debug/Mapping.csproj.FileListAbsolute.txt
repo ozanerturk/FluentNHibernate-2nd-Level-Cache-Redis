@@ -1,0 +1,15 @@
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Mapping.dll
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Mapping.pdb
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\obj\Debug\Mapping.csprojResolveAssemblyReference.cache
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\obj\Debug\Mapping.dll
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\obj\Debug\Mapping.pdb
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Domain.dll
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\FluentNHibernate.dll
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Iesi.Collections.dll
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\NHibernate.dll
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Domain.pdb
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\FluentNHibernate.pdb
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\FluentNHibernate.xml
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Iesi.Collections.xml
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\NHibernate.xml
+C:\Users\oerturk\documents\visual studio 2015\Projects\sleeve\Mapping\bin\Debug\Inflector.dll
