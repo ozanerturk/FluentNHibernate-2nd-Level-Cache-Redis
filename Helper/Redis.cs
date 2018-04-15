@@ -30,7 +30,7 @@ namespace Helper
 
         public void ValidateConfigValues()
         {
-            //TODO
+            
         }
 
         public string GetValue(int storeId, string key, string hashKey)
@@ -71,8 +71,6 @@ namespace Helper
 
         private IDatabase GetDb(int storeId)
         {
-            //Try catch kullanım sebebi InternalExfException tipindeki hataların özel olarak loglanması ve monitor edilmesi ihtiyacı
-            //Üstteki public metotlar hata fırlatabilirler, bunu handle etmek burayı çağıran yerin sorumluluğu
             try
             {
                 if (_redisConnection == null || !_redisConnection.IsConnected)
